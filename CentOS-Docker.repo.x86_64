@@ -1,0 +1,19 @@
+# CentOS-Docker.repo
+#
+# Please see http://wiki.centos.org/QaWiki/Docker4 for more 
+# information
+
+[centos-virt-docker]
+name=CentOS-$releasever - docker
+baseurl=http://mirror.centos.org/centos/$releasever/virt/$basearch/docker
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Virtualization
+
+[centos-virt-docker-testing]
+name=CentOS-$releasever - docker - testing
+baseurl=http://buildlogs.centos.org/centos/$releasever/virt/$basearch/docker
+gpgcheck=0
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Virtualization
+
