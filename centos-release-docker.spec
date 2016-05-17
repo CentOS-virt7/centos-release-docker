@@ -1,11 +1,11 @@
 Summary: CentOS Docker Support repo configs
 Name: centos-release-docker
 Version: 1
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPL
 Source1: CentOS-Docker.repo.x86_64
 URL: http://wiki.centos.org/Cloud/Docker
-ExclusiveArch: x86_64
+BuildArch: noarch
 Requires: centos-release-virt-common
 
 %description
@@ -19,6 +19,10 @@ install -m 644 %{SOURCE1} %{buildroot}/%{_sysconfdir}/yum.repos.d/CentOS-Docker.
 %config(noreplace) %{_sysconfdir}/yum.repos.d/CentOS-Docker.repo
 
 %changelog
+* Tue May 17 2016 Lokesh Mandvekar <lsm5@fedoraproject.org> - 1-3.centos
+- noarch package
+- From: Brian Stinson <bstinson@redhat.com>
+
 * Thu Mar 03 2016 Lokesh Mandvekar <lsm5@fedoraproject.org> - 1-2.centos
 - cleanup
 
